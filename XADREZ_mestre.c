@@ -74,18 +74,17 @@ printf("                ==<<CAVALO>>==\n");
 
     int i, j;
     
-    for(i = 0; i < 3; i++)
+    for(i = 0; i < 3; i++) // loop externo
     {
-       for(j = 0; j < 3; j++)
-       {
-        if(j >= 2)
+       for(j = 0; j < 3; j++) // loop interno
         {
-            continue;
+        if(j >= 2) //se j for maior ou igual a 2 pula para a próxima iteração
+        continue; // pula o resto do loop interno
+        
+        printf("CIMA\n"); //imprime CIMA nas primeiras iterações válidas
         }
-        printf("CIMA\n");
-        }
-        printf("DIREITA\n");
-        break;
+    printf("DIREITA\n");
+    break; //sai do loop externo
     }
        
     
